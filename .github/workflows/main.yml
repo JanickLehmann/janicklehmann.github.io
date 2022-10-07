@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 
 # Environment variables
 env:
-  PUBLISH_DIR: bin/publish/wwwroot
+  PUBLISH_DIR: release/wwwroot
 
 # Controls when the workflow will run
 on:
@@ -28,7 +28,7 @@ jobs:
 
       # Publish application
       - name: Publish application
-        run: dotnet publish -c Release -o bin/publish --nologo
+        run: dotnet publish -c Release -o release --nologo
 
       # Runs a set of commands using the runners shell
       - name: Add .nojekyll file
